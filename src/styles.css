@@ -1,0 +1,45 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18324a;
+  background: #eef7fb;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, input, select { font: inherit; }
+
+button, input, select, .panel { border-radius: 0.65rem; }
+
+.page-shell { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding: 2.5rem 0 4rem; }
+.hero { max-width: 760px; margin-bottom: 2rem; }
+.eyebrow { color: #0b6e9f; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0.4rem 0 0.8rem; }
+h2 { margin-top: 0; }
+.lesson-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); gap: 1.25rem; align-items: start; }
+.panel { background: white; border: 1px solid #c4dce7; padding: clamp(1.2rem, 3vw, 2rem); box-shadow: 0 12px 30px rgb(26 71 94 / 0.08); }
+.field { margin: 1.1rem 0; }
+.field > label, legend { display: block; font-weight: 750; margin-bottom: 0.35rem; }
+.hint, .error { margin: 0.25rem 0 0.4rem; font-size: 0.92rem; }
+.hint { color: #526b7d; }
+.error { color: #a51d2d; font-weight: 700; }
+input:not([type='checkbox']):not([type='radio']), select { width: 100%; border: 2px solid #a9c6d4; padding: 0.75rem; background: white; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 4px solid #ffcc4d; outline-offset: 2px; }
+[aria-invalid='true'] { border-color: #b42335 !important; }
+fieldset { border: 1px solid #c4dce7; margin: 1.2rem 0; padding: 1rem; }
+.choice { display: flex; gap: 0.65rem; align-items: center; margin: 0.55rem 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.4rem; }
+button { border: 2px solid #0d6ea6; background: #0d6ea6; color: white; padding: 0.75rem 1rem; font-weight: 800; cursor: pointer; }
+button.secondary { background: white; color: #0d5c8a; }
+.status { min-height: 1.5rem; margin-top: 1rem; font-weight: 750; }
+.summary dl div { border-bottom: 1px solid #d7e6ed; padding: 0.7rem 0; }
+.summary dt { font-size: 0.84rem; color: #587086; }
+.summary dd { margin: 0.2rem 0 0; font-weight: 750; overflow-wrap: anywhere; }
+code { background: #eaf6fb; padding: 0.08rem 0.25rem; border-radius: 0.25rem; }
+
+@media (max-width: 760px) {
+  .lesson-grid { grid-template-columns: 1fr; }
+}
+
